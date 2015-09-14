@@ -16,7 +16,7 @@ A zoomable map is generally composed of two layers: tiles and overlay data. If y
 
 The example above works fine, you can move around smoothly. But there are only three features of overlay data. Lets try with more.
 
-Create a folder ```chapter_4_zoomable``` and two other inside it ```chapter_4_zoomable/data``` and ```chapter_4_zoomable/public```. In the ```data``` folder we will put a file with bars and restaurants in Hamburg taken from OpenStreetMap called ```places.json```. Get it [here](). There are only about 2600 features but this is enough for our example.
+Create a folder ```chapter_4_zoomable``` and two other inside it ```chapter_4_zoomable/data``` and ```chapter_4_zoomable/public```. In the ```data``` folder we will put a file with bars and restaurants in Hamburg taken from OpenStreetMap called ```places.json```. Get it [here](https://github.com/idris-maps/gis-with-javascript-tutorial/blob/master/chapter_4_zoomable/data/places.json). There are only about 2600 features but this is enough for our example.
 
 Go to the ```chapter_4_zoomable``` folder, initialise ```npm``` and download ```leaflet```
 
@@ -449,6 +449,8 @@ map.on('moveend', function() {
 ```
 
 We now have a working map with more than 2600 points.
+
+All the code is [here](https://github.com/idris-maps/gis-with-javascript-tutorial/tree/master/chapter_4_zoomable)
 
 If we have a look at the size of our final script, ```chapter_04_zoomable/public/script.js``` it is 1.2MB. Which is rather heavy. Although it works locally, it will take some time to be sent down the wires to your users, in particular those using mobile phones. 
 

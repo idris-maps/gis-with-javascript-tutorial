@@ -2,7 +2,7 @@
 
 Finally we get to the primary use of javascript in GIS: rendering maps in the browser.
 
-If you just want to show a static map, rendering the map in the browser does not make much sense. A static image will render faster and on a wider range of devices. But it is the perfect tool if you want to show a lot of data or keep your users for a little longer with animation and interaction.
+If you just want to show a static map, rendering the map in the browser does not make much sense. A static image will render faster and on a wider range of devices (read about how to create one in [chapter 2](https://github.com/idris-maps/gis-with-javascript-tutorial/tree/master/chapter_2_print_map)). But it is the perfect tool if you want to show a lot of data or keep your users for a little longer with animation and interaction.
 
 ##Animation basics
 
@@ -195,17 +195,17 @@ watchify animatedMap.js -o 3.2_animated_map/script.js
 
 In ```data``` we put two GeoJSON files:
 
-```land.json``` all the landmass of the earth except Antartica. Get it [here]()
+```land.json``` all the landmass of the earth except Antartica. Get it [here](https://github.com/idris-maps/gis-with-javascript-tutorial/blob/master/chapter_3_animation_interaction/data/land.json)
 
-```cities.json``` an array of the 10 most populated places from [Natural Earth populated places](http://www.naturalearthdata.com/downloads/110m-cultural-vectors/) with the following keys: ```name```, ```pop```, ```lat```, ```lng```. Get it [here]()
+```cities.json``` an array of the 10 most populated places from [Natural Earth populated places](http://www.naturalearthdata.com/downloads/110m-cultural-vectors/) with the following keys: ```name```, ```pop```, ```lat```, ```lng```. Get it [here](https://github.com/idris-maps/gis-with-javascript-tutorial/blob/master/chapter_3_animation_interaction/data/cities.json)
 
 When dealing with maps that will be rendered in the browser, we have to remember that although modern browsers are very powerful, they do not handle any amount of data smoothly. The more data you throw at them the slower they are. If we want a decent experience for users on less powerful devices, we have to use the strict minimum for our purposes. We will talk more about that in the next chapter about zoomable maps. 
 
-```land.json``` is taken from [Natural Earth countries](http://www.naturalearthdata.com/downloads/110m-cultural-vectors/), all of them except Antartica have been united into one ```MultiPolygon``` with [turf-union](https://www.npmjs.com/package/turf-union) and simplified with [mapshaper](https://www.npmjs.com/package/mapshaper). For tips about how to do that, check out the first chapter in this serie, [Geodata in javascript]().
+```land.json``` is taken from [Natural Earth countries](http://www.naturalearthdata.com/downloads/110m-cultural-vectors/), all of them except Antartica have been united into one ```MultiPolygon``` with [turf-union](https://www.npmjs.com/package/turf-union) and simplified with [mapshaper](https://www.npmjs.com/package/mapshaper). For tips about how to do that, check out the first chapter in this serie, [Geodata in javascript](https://github.com/idris-maps/gis-with-javascript-tutorial/tree/master/chapter_1_geodata).
 
 
 
-In ```animatedMap.js``` create a map with ```land.json```. For more about how to do that, check out the previous chapter, [Draw a map for print]()
+In ```animatedMap.js``` create a map with ```land.json```. For more about how to do that, check out the previous chapter, [Draw a map for print](https://github.com/idris-maps/gis-with-javascript-tutorial/tree/master/chapter_2_print_map)
 
 ```
 var d3 = require('d3')
@@ -499,6 +499,8 @@ setInterval(function() {
 ```
 
 We have an animated map that moves between the 10 most populated places on the planet.
+
+All the code is [here](https://github.com/idris-maps/gis-with-javascript-tutorial/tree/master/chapter_3_animation_interaction)
 
 ###Have fun
 

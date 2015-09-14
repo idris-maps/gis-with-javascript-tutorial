@@ -1,6 +1,6 @@
 #Server for zoomable maps
 
-This chapter is a continuation of the previous one about [Zoomable maps](). Last time we were left with the problem of a too big script file because we send all the data immediatly when the user opens the map. 
+This chapter is a continuation of the previous one about [Zoomable maps](https://github.com/idris-maps/gis-with-javascript-tutorial/tree/master/chapter_4_zoomable). Last time we were left with the problem of a too big script file because we send all the data immediatly when the user opens the map. 
 
 In this chapter we will solve that problem by moving some logic from the browser to the server. This is the beauty of using the same language on the server as on the client. If you ever wondered why node has become so popular as a server environment, you will soon see why.
 
@@ -8,14 +8,14 @@ In this chapter we will solve that problem by moving some logic from the browser
 
 Create a folder called ```chapter_5_server_backend```.
 
-Initialise npm and download the libraries we used in the previous chapter [leaflet](http://leafletjs.com/) and [tilebet](https://www.npmjs.com/package/tilebelt) as well as a new one called [express](http://expressjs.com/) that will let us create the server
+Initialise npm and download the libraries we used in the previous chapter [leaflet](http://leafletjs.com/) and [tilebelt](https://www.npmjs.com/package/tilebelt) as well as a new one called [express](http://expressjs.com/) that will let us create the server
 
 ```
 npm init
 npm install leaflet tilebelt express --save
 ```
 
-Copy the ```data```, ```lib``` and ```public``` directories from [chapter 4]().  
+Copy the ```data```, ```lib``` and ```public``` directories from [chapter 4](https://github.com/idris-maps/gis-with-javascript-tutorial/tree/master/chapter_4_zoomable).  
 
 You can also copy the ```main.js``` file from the previous chapter into ```chapter_5_server_backend``` and compile it into ```chapter_5_server_backend/public/script.js``` with watchify
 
@@ -359,6 +359,8 @@ And go to ```http://localhost:3000/``` in the browser.
 The map loads faster as the ```script.js``` file is now only 300KB as opposed to the 1.2MB we had before. There is a bit more time between when the markers are removed and the new ones added because it has to ask the server.
 
 With this set (about 2600 features), we have the choice between sending it all at once or using a server backend. But if you have more points, maybe millions, then you can not possibily load all data at start. You have too use a server. Most likely with a database behind instead of a json file. There are many libraries that let you connect to databases like [mongodb](https://www.npmjs.com/package/mongodb) for MongoDB or [pg](https://www.npmjs.com/package/pg) for PostgreSQL.
+
+All the code is [here](https://github.com/idris-maps/gis-with-javascript-tutorial/tree/master/chapter_5_server_backend)
 
 ##Tile cache
 

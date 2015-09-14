@@ -14,8 +14,8 @@ npm install express leaflet --save
 ```
 
 Within ```chapter_6_geolocation```, create a ```public``` folder with:
-* the ```public/css``` folder from chapter 5
-* the ```public/images``` folder from chapter 5
+* the ```public/css``` folder from [chapter 5](https://github.com/idris-maps/gis-with-javascript-tutorial/tree/master/chapter_5_server_backend)
+* the ```public/images``` folder from [chapter 5](https://github.com/idris-maps/gis-with-javascript-tutorial/tree/master/chapter_5_server_backend)
 * a ```public/js``` folder for our ```script.js```
 * a ```index.html``` file like this:
 
@@ -597,6 +597,8 @@ Restart the server and open a few browser windows at ```http://localhost:3000/``
 
 We have a very basic but functionning fleet tracker.
 
+The code is [here](https://github.com/idris-maps/gis-with-javascript-tutorial/tree/master/chapter_6_geolocation)
+
 ###Fine tuning
 
 If we want to try it out with real data, change ```getPositionFake()``` to ```getPosition()``` to emit the position and connect to your server with moving mobile phones.
@@ -693,4 +695,4 @@ exports.move = function(position, map, users) {
 
 That's all folks. 
 
-I hope you enjoyed this series about GIS with javascript. I am Anders at [idris-maps](http://www.idris-maps.com), Contact us on [twitter](https://twitter.com/IdrisMaps) if you have any questions or wish to hire me.
+I hope you enjoyed this [series about GIS with javascript](https://github.com/idris-maps/gis-with-javascript-tutorial). I am Anders at [idris-maps](http://www.idris-maps.com), Contact us on [twitter](https://twitter.com/IdrisMaps) if you have any questions or wish to hire me.

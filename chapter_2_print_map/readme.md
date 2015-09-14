@@ -2,7 +2,7 @@
 
 *Drawing maps for print with javascript? Is the point of javascript not to do things for the web?*
 
-Yes, of course. And we will get there in coming chapters. Whether you need a quick map to illustrate an article or a more complex one for a printed poster, you can do it with javascript without the use of any desktop GIS software. That is what this chapter is about. It will also get us to start playing with [D3js](http://d3js.org/)
+Yes, of course. And we will get there in coming chapters. Whether you need a quick map to illustrate an article or a more complex one for a printed poster, you can do it with javascript without the use of any desktop GIS software. That is what this chapter is about. It will also get us to start playing with [D3js](http://d3js.org/) by [Mike Bostock](http://bost.ocks.org/mike/)
 
 ##D3js
 
@@ -110,6 +110,8 @@ All of our rectangles start 10 pixels from the left, ```x``` is always 10. We wa
 
 Refresh the browser. This is your first graph with D3. Hopefully there will be many more.
 
+The code is [here](https://github.com/idris-maps/gis-with-javascript-tutorial/blob/master/chapter_2_print_map/d3_example.html)
+
 ###Learning d3
 
 This basic example shows how straight forward the api is. The trick is that you must have a good understanding of how svg works. D3js has so many helpful functions that it may seem daunting at first. You do not need to learn them all to start creating visualisations. Once you understand how it works, you can do pretty much anything. Check out the [examples](https://github.com/mbostock/d3/wiki/Gallery) for some inspiration.
@@ -118,7 +120,7 @@ Luckily, to make maps we only need to understand a few essential parts of the li
 
 ###Maps with D3
 
-Apart from ```<rect>```, there are a few basic shapes you can do in svg such as lines ```<line>``` or circles ```<circle>```. More complex shapes are represented as paths ```<path>```. Each path has an attribute ```d``` that describes how it looks. D3 helps us create paths from a GeoJSON by calculating the ```d``` attributes depending on the projection we choose. We will start by using the ```countries.json``` file from the first chapter. 
+Apart from ```<rect>```, there are a few basic shapes you can do in svg such as lines ```<line>``` or circles ```<circle>```. More complex shapes are represented as paths ```<path>```. Each path has an attribute ```d``` that describes how it looks. D3 helps us create paths from a GeoJSON by calculating the ```d``` attributes depending on the projection we choose. We will start by using the ```countries.json``` file from [the first chapter](https://github.com/idris-maps/gis-with-javascript-tutorial/tree/master/chapter_1_geodata). Get it [here](https://github.com/idris-maps/gis-with-javascript-tutorial/blob/master/chapter_2_print_map/data/countries.json)  
 
 ##Setup
 
@@ -261,7 +263,7 @@ Check it in the browser
 
 ###Draw lines
 
-I downloaded ["Geographic lines" from natural earth](http://www.naturalearthdata.com/http//www.naturalearthdata.com/download/110m/physical/ne_110m_geographic_lines.zip) (these are the equator, the polar circles and the tropics), converted it to GeoJSON and called it ```lines.json```.
+I downloaded ["Geographic lines" from natural earth](http://www.naturalearthdata.com/http//www.naturalearthdata.com/download/110m/physical/ne_110m_geographic_lines.zip) (these are the equator, the polar circles and the tropics), converted it to GeoJSON and called it ```lines.json```. Get it [here](https://github.com/idris-maps/gis-with-javascript-tutorial/blob/master/chapter_2_print_map/data/lines.json)
 
 Get it [here](), add it to the ```data``` folder and require it in ```main.js```
 
@@ -491,3 +493,5 @@ You can use it as it is in most layout programs or convert it to a bitmap image 
 The ```map.png``` image below is made with Inkscape (```ctrl-shift-E```). To see some examples of more complex maps made  with this technique, checkout my [Map of the Philippines](https://rawgit.com/idris-maps/09c6540cef2106e1a3ca/raw/) or this one of [Europe](https://rawgit.com/idris-maps/4bff39e7a8bbac1b4f75/raw/)
 
 ![Map](map.png)
+
+All the code is [here](https://github.com/idris-maps/gis-with-javascript-tutorial/tree/master/chapter_2_print_map)
