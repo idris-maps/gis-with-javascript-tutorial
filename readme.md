@@ -65,8 +65,21 @@ If we pick up an existing project we can install the dependecies with
 npm install
 ```
 
-
 It will download all the libraries declared in ```package.json```
+
+###require a dependency
+
+When you use a dependency in your code you ```require``` it like this if it has been downloaded with npm
+
+```
+var dependency = require('dependency')
+```
+
+If it is a piece of code that you have written yourself you require it relative to the script you want to run in the file system. If it is a file called ```myScript.js``` that is in a folder called ```lib``` in the same place as the code you want to run, it looks like this:
+
+```
+var myScript = require('./lib/myScript')
+``` 
 
 ##Chapters
 
