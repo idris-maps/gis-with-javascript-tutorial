@@ -265,7 +265,7 @@ Check it in the browser
 
 I downloaded ["Geographic lines" from natural earth](http://www.naturalearthdata.com/http//www.naturalearthdata.com/download/110m/physical/ne_110m_geographic_lines.zip) (these are the equator, the polar circles and the tropics), converted it to GeoJSON and called it ```lines.json```. Get it [here](https://github.com/idris-maps/gis-with-javascript-tutorial/blob/master/chapter_2_print_map/data/lines.json)
 
-Get it [here](), add it to the ```data``` folder and require it in ```main.js```
+Add it to the ```data``` folder and require it in ```main.js```
 
 ```
 var linesData = require('./data/lines.json')
@@ -290,7 +290,7 @@ We are using two previously unseen attributes ```stroke``` and ```stroke-dasharr
 
 ###Draw points
 
-I created a collection with points of continent names called ```continents.json```. Get it [here](), add it to the ```data``` folder and require it in ```main.js```
+I created a collection with points of continent names called ```continents.json```. Get it [here](https://github.com/idris-maps/gis-with-javascript-tutorial/blob/master/chapter_2_print_map/data/continents.json), add it to the ```data``` folder and require it in ```main.js```
 
 ```
 var pointData = require('./data/continents.json')
