@@ -1,0 +1,20 @@
+{
+  "name": "1.1_shapefiles",
+  "version": "0.0.0",
+  "description": "GIS with javascript chapter 1 - example 1 convert shapefiles",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "GIS",
+    "javascript",
+    "shapefiles"
+  ],
+  "author": "idris-maps.com",
+  "license": "GPL",
+  "dependencies": {
+    "shapefile": "~0.3.0",
+    "jsonfile": "~2.2.1"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "name": "1.4_spatial_selection",
+  "version": "0.0.0",
+  "description": "GIS with javascript chapter 1 - example 4 spatial selection",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "GIS",
+    "javascript",
+    "spatial",
+    "selection"
+  ],
+  "author": "idris-maps.com",
+  "license": "GPL",
+  "dependencies": {
+    "jsonfile": "~2.2.1",
+    "turf-intersect": "~1.4.2"
+  }
+}

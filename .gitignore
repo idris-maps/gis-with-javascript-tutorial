@@ -1,0 +1,10 @@
+chapter_1_geodata/1.1_shapefiles/node_modules
+chapter_1_geodata/1.2_postgis/node_modules
+chapter_1_geodata/1.3_osm/node_modules
+chapter_1_geodata/1.4_spatial_selection/node_modules
+chapter_2_print_map/node_modules
+chapter_3_animation_interaction/node_modules
+chapter_4_zoomable/node_modules
+chapter_5_server_backend/data/tiles
+chapter_5_server_backend/node_modules
+

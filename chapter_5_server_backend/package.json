@@ -1,0 +1,24 @@
+{
+  "name": "chapter_5_server_backend",
+  "version": "0.0.0",
+  "description": "GIS with javascript chapter 5 - backend server",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "GIS",
+    "javascript",
+    "backend",
+    "expressJS"
+  ],
+  "author": "idris-maps.com",
+  "license": "GPL",
+  "dependencies": {
+    "tilebelt": "~1.0.1",
+    "express": "~4.13.3",
+    "leaflet": "~0.7.5",
+    "jsonfile": "~2.2.1",
+    "request": "~2.61.0"
+  }
+}

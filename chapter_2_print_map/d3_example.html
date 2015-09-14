@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js" charset="utf-8"></script>
+	</head>
+	<body>
+		<script>
+var body = d3.select('body')
+var svg = body.append('svg').attr({
+		height: 300,
+		width: 500	
+	})
+var randomData = []
+for(i=0;i<5;i++) {
+	randomData.push(Math.floor(Math.random() * 500))
+}
+svg.selectAll('rect')
+	.data(randomData)
+	.enter()
+	.append('rect')
+	.attr({
+		x: 10,
+		y: function(d,i) { return i * 30 },
+		width: function(d) { return d },
+		height: 28,
+		fill: 'blue' 
+	})
+		</script>
+	</body>
+</html>
+

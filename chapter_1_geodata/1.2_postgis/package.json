@@ -1,0 +1,20 @@
+{
+  "name": "1.2_postgis",
+  "version": "0.0.0",
+  "description": "GIS with javascript chapter 1 - example 2 get data from postGIS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "GIS",
+    "javascript",
+    "postgreSQL",
+    "postGIS"
+  ],
+  "author": "idris-maps.com",
+  "license": "GPL",
+  "dependencies": {
+    "postgeo": "~0.1.2"
+  }
+}

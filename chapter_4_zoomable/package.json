@@ -1,0 +1,22 @@
+{
+  "name": "chapter_4_zoomable",
+  "version": "0.0.0",
+  "description": "GIS with javascript chapter 4 - example 1 zoomable maps",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "GIS",
+    "javascript",
+    "zoomable",
+    "maps",
+    "leafletJS"
+  ],
+  "author": "idris-maps.com",
+  "license": "GPL",
+  "dependencies": {
+    "leaflet": "~0.7.5",
+    "tilebelt": "~1.0.1"
+  }
+}

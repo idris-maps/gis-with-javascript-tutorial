@@ -1,0 +1,19 @@
+{
+  "name": "1.3_osm",
+  "version": "0.0.0",
+  "description": "GIS with javascript chapter 1 - example 3 convert OSM data",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "GIS",
+    "javascript",
+    "OSM"
+  ],
+  "author": "idris-maps.com",
+  "license": "GPL",
+  "dependencies": {
+    "jsonfile": "~2.2.1"
+  }
+}
