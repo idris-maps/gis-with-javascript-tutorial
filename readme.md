@@ -16,9 +16,8 @@ That is all you need in terms of software. The only other prerequisites are that
 
 Atwoods law states that
 
-_
-Any application that can be written in JavaScript, will eventually be written in JavaScript
-_
+
+> Any application that can be written in JavaScript, will eventually be written in JavaScript
 
 This, as we will see, also applies to GIS. 
 
@@ -28,9 +27,7 @@ You might wonder why. There are plenty of open source tools to do GIS. The ratio
 
 The wikipedia entry about node starts with:
 
-_
-Node.js is an open-source, cross-platform runtime environment for developing server-side web applications. Node.js applications are written in JavaScript and can be run within the Node.js runtime on OS X, Microsoft Windows, Linux, FreeBSD, NonStop, IBM AIX, IBM System z and IBM i.
-_
+> Node.js is an open-source, cross-platform runtime environment for developing server-side web applications. Node.js applications are written in JavaScript and can be run within the Node.js runtime on OS X, Microsoft Windows, Linux, FreeBSD, NonStop, IBM AIX, IBM System z and IBM i.
 
 That sums it up rather neatly. What it means for us is that we can execute javascript from the command line and write a server.
 
@@ -73,12 +70,12 @@ It will download all the libraries declared in ```package.json```
 
 ##Chapters
 
-1. ####[Geodata in javascript](https://github.com/idris-maps/gis-with-javascript-tutorial/tree/master/chapter_1_geodata)
-2. ####[Draw a map for print](https://github.com/idris-maps/gis-with-javascript-tutorial/tree/master/chapter_2_print_map)
-3. ####[Animation and interaction](https://github.com/idris-maps/gis-with-javascript-tutorial/tree/master/chapter_3_animation_interaction)
-4. ####[Zoomable maps](https://github.com/idris-maps/gis-with-javascript-tutorial/tree/master/chapter_4_zoomable)
-5. ####[Server backend for zoomable maps](https://github.com/idris-maps/gis-with-javascript-tutorial/tree/master/chapter_5_server_backend)
-6. ####[Geolocation and fleet tracking](https://github.com/idris-maps/gis-with-javascript-tutorial/tree/master/chapter_6_geolocation)
+1. [Geodata in javascript](https://github.com/idris-maps/gis-with-javascript-tutorial/tree/master/chapter_1_geodata)
+2. [Draw a map for print](https://github.com/idris-maps/gis-with-javascript-tutorial/tree/master/chapter_2_print_map)
+3. [Animation and interaction](https://github.com/idris-maps/gis-with-javascript-tutorial/tree/master/chapter_3_animation_interaction)
+4. [Zoomable maps](https://github.com/idris-maps/gis-with-javascript-tutorial/tree/master/chapter_4_zoomable)
+5. [Server backend for zoomable maps](https://github.com/idris-maps/gis-with-javascript-tutorial/tree/master/chapter_5_server_backend)
+6. [Geolocation and fleet tracking](https://github.com/idris-maps/gis-with-javascript-tutorial/tree/master/chapter_6_geolocation)
 
 <br/>
 <br/>
