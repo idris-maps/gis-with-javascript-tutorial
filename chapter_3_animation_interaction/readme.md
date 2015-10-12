@@ -508,7 +508,7 @@ Now it is your turn to create interactive maps. Remember that anything can be an
  
 ###Examples
 
-* Animated map: [Day and night](https://rawgit.com/idris-maps/c6429ce5e1e7e1b29322/raw/) --- [code](https://github.com/idris-maps/day-night-map)
+* Animated map: [Day and night](http://bl.ocks.org/idris-maps/raw/c6429ce5e1e7e1b29322/) --- [code](https://github.com/idris-maps/day-night-map)
 * Interactive map: [basic data about european NUTS2 regions](http://bl.ocks.org/idris-maps/raw/06a26e4a5a6f4e9ef633/)  --- [code](https://github.com/idris-maps/nuts-map)
 
 In the next chapter we will talk about zoomable maps. 

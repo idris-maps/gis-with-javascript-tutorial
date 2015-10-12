@@ -96,4 +96,4 @@ var myScript = require('./lib/myScript')
 <br/>
 <br/>
 ![Idris maps](readmeImage1.png)
-
+![CC-BY](cc-by-logo.png)
