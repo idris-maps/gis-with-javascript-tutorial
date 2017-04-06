@@ -1,4 +1,4 @@
-#Zoomable map with Leaflet.js
+# Zoomable map with Leaflet.js
 
 Zoomable maps, along with easier and faster data collection, is the most visible evolution brought to cartograhy by computers.
 
@@ -6,13 +6,13 @@ There is an excellent library for creating those, [leaflet](http://leafletjs.com
 
 The [api](http://leafletjs.com/reference.html) is straight forward and [the examples](http://leafletjs.com/examples.html) are telling enough, so this tutorial will not be about how to use leaflet. Rather we will talk about a common problem when dealing with zoomable maps: big amounts of overlay data.
 
-##Too much overlay data
+## Too much overlay data
 
-###What is overlay data?
+### What is overlay data?
 
 A zoomable map is generally composed of two layers: tiles and overlay data. If you check out the [quick example](http://leafletjs.com/examples/quick-start-example.html) on the leaflet webpage, the overlay data are: the circle, the marker and the triangle. The tiles are all the rest, the London map underneath.
 
-###How can there be too much?
+### How can there be too much?
 
 The example above works fine, you can move around smoothly. But there are only three features of overlay data. Lets try with more.
 
@@ -113,7 +113,7 @@ Check the browser again.
 
 It works but the page takes very long time to load and moving around is nearly impossible. We already have too many overlay features for the browser to handle.
 
-###Heatmap
+### Heatmap
 
 One way to tackle this problem is to create a heatmap. We will use some code that I found on [Vladimir Agafonkins github page](https://raw.githubusercontent.com/Leaflet/Leaflet.heat/gh-pages/dist/leaflet-heat.js)
 
@@ -160,9 +160,9 @@ This works well to see in which areas there are the most bars but we would like 
 
 We need to just show the features in the visible part of the map. One way to do this is to divide the markers into parts, "tiles", and only show those needed.
 
-###Divide features into "tiles"
+### Divide features into "tiles"
 
-####Zoom level and map bounds
+#### Zoom level and map bounds
 
 First we will display, in the console, the zoom level and the bounds of the map after a movement (the ```moveend``` event).
 
@@ -176,7 +176,7 @@ map.on('moveend', function() {
 
 If we go back to the browser, open the console and move around we see at which zoom level we are and the ```_southWest``` (the lowest longitude and latitude) point and ```_northEast``` (the highest longitude and latitude) point of the visible map.
 
-####Remove heatmap on higher zoom levels
+#### Remove heatmap on higher zoom levels
 
 Say we want to display the markers at zoom levels higher or equal to 16. Then we want the heatmap to disappear on those zoom level. Add the following to the ```moveend``` event.
 
@@ -190,7 +190,7 @@ map.on('moveend', function() {
 })
 ```
 
-####Find current tiles
+#### Find current tiles
 
 Now we want to add our markers when zoom level is 16 or higher. But we need to divide the data into tiles. We could use our own tile coordinates system but there is already an existing one for maps, the one to display the raster tiles (the London map of the [leaflet example](http://leafletjs.com/examples/quick-start-example.html)).
 
@@ -256,7 +256,7 @@ map.on('moveend', function() {
 })
 ```
 
-####Divide features into tiles
+#### Divide features into tiles
 
 So now that we know which tiles we need, we need to divide our points into tiles. I have created a script that does just that. Download it from [github](https://github.com/idris-maps/geojson-point-tiles) to your Desktop and install the dependecies
 
@@ -303,7 +303,7 @@ It is an array of feature collections divided into x and y coordinates.
 
 Copy ```data/places_tiles.json``` to ```chapter_4_zoomable/data```. You can delete the ```geojson-point-tiles``` folder, we do not need it anymore.
 
-####Using the markers divided into tiles
+#### Using the markers divided into tiles
 
 Go back to ```main.js``` and require this dataset instead of ```places.json```
 
@@ -342,7 +342,7 @@ for(i=0;i<data.length;i++) {
 }
 ```
 
-####Get the points within the map view
+#### Get the points within the map view
 
 We know which tiles should be shown thanks to the ```getTiles()``` function we created previously. We want to get the features in said tiles so that we can display them. We will create a ```getFeatures()``` function that takes the needed tiles and returns the features within.
 
@@ -412,7 +412,7 @@ Try it in the browser.
 
 Have you noticed that the more you move, the slower it gets and the darker the shadows of the markers get? That is because every time you move, markers are added. They should be removed before we add new ones.
 
-####Remove old markers before adding new
+#### Remove old markers before adding new
 
 If you inspect the HTML (ctrl-shit-C in firefox), you see that the markers are all in a ```<div>``` element with a class of "leaflet-marker-pane" and all the shadows in a ```<div>``` with a class of "leaflet-shadow-pane". We can remove the markers by clearing those two ```<div>```s. Make a function that does it
 

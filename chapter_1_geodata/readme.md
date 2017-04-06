@@ -1,10 +1,10 @@
-#Geodata in javascript
+# Geodata in javascript
 
 [GeoJSON](https://en.wikipedia.org/wiki/GeoJSON) is the standard way of storing geodata in [JSON](https://en.wikipedia.org/wiki/JSON), javascripts native data format. The [wikipedia article](https://en.wikipedia.org/wiki/GeoJSON) has very clear and telling examples. If you have never heard of GeoJSON, read it. The aim of this article is to show you how to convert your geodata to GeoJSON and some basics in querying the data.
 
-##Convert to GeoJSON
+## Convert to GeoJSON
 
-###Shapefiles
+### Shapefiles
 
 If your geodata comes in files, probably they are [shapefiles](https://en.wikipedia.org/wiki/Shapefile). There are a number of [javascript libraries that convert shapefiles to geojson](https://www.npmjs.com/search?q=shp), we will use [shapefile](https://www.npmjs.com/package/shapefile) by Mike Bostock the creator of [D3js](http://d3js.org/), a library we will use later for visualising our data.
 
@@ -83,7 +83,7 @@ You now have a ```countries.geojson``` file in ```/data/geojson```.
 
 The code is [here](https://github.com/idris-maps/gis-with-javascript-tutorial/tree/master/chapter_1_geodata/1.1_shapefiles)
 
-###PostGIS
+### PostGIS
 
 If you have geodata in a database it probably is a [PostgreSQL](http://www.postgresql.org/) db with the [postGIS](http://postgis.net/) plugin. If it is not ...change database server :) 
 
@@ -191,7 +191,7 @@ You have your GeoJSON in the console. If you want to save it to a file, use ```j
 
 The code is [here](https://github.com/idris-maps/gis-with-javascript-tutorial/tree/master/chapter_1_geodata/1.2_postgis)
 
-###OpenStreetMap data
+### OpenStreetMap data
 
 [OSM](https://www.openstreetmap.org/), is the wikipedia of geodata: a very useful resource for any mapping project. The data comes in [.osm files](http://wiki.openstreetmap.org/wiki/OSM_XML) a form of [.xml file](https://en.wikipedia.org/wiki/XML). There are a lot of ways to get OSM data, see the [wiki](http://wiki.openstreetmap.org/wiki/Downloading_data). To convert it to GeoJSON, you can use [osmtogeojson](https://github.com/tyrasd/osmtogeojson) which works as a command line tool.
 
@@ -211,9 +211,9 @@ This could take some time if the .osm file is big. I would not try on [planet.os
 
 The GeoJSON file created this way includes all types of data (points, lines, polygons...) in one file, just like in the original .osm file. This is a good starting point for some basics in querying GeoJSON files.
 
-##Query GeoJSON
+## Query GeoJSON
 
-###Loop
+### Loop
 
 The main approach to working with GeoJSON data is to loop through the features. The classical method of looping through an array in javascript looks like this:
 
@@ -250,7 +250,7 @@ for(i=0;i<continents.length;i++) {
 
 All continents are logged one after the other and the loop stops at the end.
 
-###Select
+### Select
 
 Using a loop, we will now do a selection on the features of a GeoJSON file. Create a new folder, download some OSM data (I used the ```wget``` example from the [wiki](http://wiki.openstreetmap.org/wiki/Downloading_data#Download_the_data)) and convert it to GeoJSON. 
 
@@ -336,7 +336,7 @@ When the console says it is done, you have the file in the ```1.3_osm``` folder.
 
 Get the code [here](https://github.com/idris-maps/gis-with-javascript-tutorial/tree/master/chapter_1_geodata/1.3_osm)
 
-###Spatial selections
+### Spatial selections
 
 The [turf](https://github.com/turfjs/turf) library describes itself as 'a modular geospatial engine written in JavaScript'. Modular means you do not need to download the whole thing, you just use the function you are interested in. Have a look at the [API](http://turfjs.org/static/docs/), there are plenty. 
 

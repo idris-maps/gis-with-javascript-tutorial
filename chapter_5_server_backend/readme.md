@@ -1,10 +1,10 @@
-#Server for zoomable maps
+# Server for zoomable maps
 
 This chapter is a continuation of the previous one about [Zoomable maps](https://github.com/idris-maps/gis-with-javascript-tutorial/tree/master/chapter_4_zoomable). Last time we were left with the problem of a too big script file because we send all the data immediatly when the user opens the map. 
 
 In this chapter we will solve that problem by moving some logic from the browser to the server. This is the beauty of using the same language on the server as on the client. If you ever wondered why node has become so popular as a server environment, you will soon see why.
 
-###Setup
+### Setup
 
 Create a folder called ```chapter_5_server_backend```.
 
@@ -25,7 +25,7 @@ watchify main.js -o public/script.js
 
 If you open ```chapter_5_server_backend/public/index.html``` in a browser, it is what we had at the end of chapter 4. 
 
-###Create a server
+### Create a server
 
 Create a file called ```server.js```, this will be where we write the server. Open it, require ```express``` and create an ```app``` variable.
 
@@ -92,7 +92,7 @@ node server
 
 And go to this URL in the browser ```http://localhost:3000/```. Our map is served but it is still the same. Lets see how we can make it lighter. 
 
-####Remove the data from the browser script
+#### Remove the data from the browser script
 
 Open ```main.js``` and remove the line that requires the data.
 
@@ -104,7 +104,7 @@ We did two things with the data in ```main.js```:
 * created the ```latlngs``` array for the heatmap
 * got the markers at zoom level 16 and higher.
 
-####The ```latlngs``` array
+#### The ```latlngs``` array
 
 We will create the ```latlngs``` array beforehand so that it does not need to be done in the browser. We will write it to a ```.json``` file, download the [jsonfile](https://www.npmjs.com/package/jsonfile) library.
 
@@ -166,7 +166,7 @@ var latlngs = require('./data/latlngs.json') // <-- new
 var heatmap = L.heatLayer(latlngs).addTo(map)
 ```
 
-####Move the markers to the server
+#### Move the markers to the server
 
 We want the server to send the markers. We will not send the whole dataset at once but only the part needed for the current map view. Open ```main.js``` and copy the ```getTiles()``` and ```getFeatures()``` functions to ```server.js``` as we want that part to be done there. 
 
@@ -273,7 +273,7 @@ $ node server
 
 Try it by going to ```http://localhost:3000/markers/9.975/10.005/53.547/53.552``` and see the features returned
 
-####Get data from the server in the browser script
+#### Get data from the server in the browser script
 
 Now that the server is ready, go back to ```main.js``` and add a function that ```GET```s a URL, like the one above, and returns the data 
 
@@ -362,7 +362,7 @@ With this set (about 2600 features), we have the choice between sending it all a
 
 All the code is [here](https://github.com/idris-maps/gis-with-javascript-tutorial/tree/master/chapter_5_server_backend)
 
-##Tile cache
+## Tile cache
 
 There is one last point I want to talk about concerning zoomable maps, the raster tiles.
 
@@ -370,11 +370,11 @@ Suppose you make a map that becomes really popular and you use freely available 
 
 You could subscribe to a paid plan from [geofabrik](http://www.geofabrik.de/maps/tiles.html), [mapbox](https://www.mapbox.com/pricing/) or someone else. It is generally not very expensive. But if it makes sense to you to use your server's computer power instead, you can cache tiles.
 
-###How it works
+### How it works
 
 When a tile is requested by a user you first check if you already have it. If not you get it for her and keep it so that you can serve it next time it is asked for.
 
-###Setup
+### Setup
 
 I have created a script for express servers that does just that. It is on [this github page](https://github.com/idris-maps/cache-tiles). 
 

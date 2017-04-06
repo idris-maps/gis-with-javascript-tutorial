@@ -1,14 +1,14 @@
-#Draw a map for print
+# Draw a map for print
 
 *Drawing maps for print with javascript? Is the point of javascript not to do things for the web?*
 
 Yes, of course. And we will get there in coming chapters. Whether you need a quick map to illustrate an article or a more complex one for a printed poster, you can do it with javascript without the use of any desktop GIS software. That is what this chapter is about. It will also get us to start playing with [D3js](http://d3js.org/) by [Mike Bostock](http://bost.ocks.org/mike/)
 
-##D3js
+## D3js
 
 D3 stands for Data Driven Documents. It lets you manipulate [SVG](https://en.wikipedia.org/wiki/SVG), in a similar way to how you may use [jQuery](http://jquery.com/) to manipulate the [DOM](https://en.wikipedia.org/wiki/Document_Object_Model), using data. If the last sentence makes no sense to you, don't worry. It just means that you can draw vector graphics (SVG) using data with this library.
 
-###A quick example
+### A quick example
 
 For this chapter we create a new folder called ```chapter_2_print_map```.
 
@@ -112,17 +112,17 @@ Refresh the browser. This is your first graph with D3. Hopefully there will be m
 
 The code is [here](https://github.com/idris-maps/gis-with-javascript-tutorial/blob/master/chapter_2_print_map/d3_example.html)
 
-###Learning d3
+### Learning d3
 
 This basic example shows how straight forward the api is. The trick is that you must have a good understanding of how svg works. D3js has so many helpful functions that it may seem daunting at first. You do not need to learn them all to start creating visualisations. Once you understand how it works, you can do pretty much anything. Check out the [examples](https://github.com/mbostock/d3/wiki/Gallery) for some inspiration.
 
 Luckily, to make maps we only need to understand a few essential parts of the library.
 
-###Maps with D3
+### Maps with D3
 
 Apart from ```<rect>```, there are a few basic shapes you can do in svg such as lines ```<line>``` or circles ```<circle>```. More complex shapes are represented as paths ```<path>```. Each path has an attribute ```d``` that describes how it looks. D3 helps us create paths from a GeoJSON by calculating the ```d``` attributes depending on the projection we choose. We will start by using the ```countries.json``` file from [the first chapter](https://github.com/idris-maps/gis-with-javascript-tutorial/tree/master/chapter_1_geodata). Get it [here](https://github.com/idris-maps/gis-with-javascript-tutorial/blob/master/chapter_2_print_map/data/countries.json)  
 
-##Setup
+## Setup
 
 Create a directory ```chapter_2_print_map``` and another one within it called ```data``` where you put the ```countries.json``` file.
 
@@ -170,7 +170,7 @@ $ npm init
 $ npm install d3 --save
 ```
 
-###Draw polygons
+### Draw polygons
 
 Open ```main.js```, remove the log message and require ```d3``` and ```countries.json```
 
@@ -261,7 +261,7 @@ svg.selectAll('path.countries')
 
 Check it in the browser
 
-###Draw lines
+### Draw lines
 
 I downloaded ["Geographic lines" from natural earth](http://www.naturalearthdata.com/http//www.naturalearthdata.com/download/110m/physical/ne_110m_geographic_lines.zip) (these are the equator, the polar circles and the tropics), converted it to GeoJSON and called it ```lines.json```. Get it [here](https://github.com/idris-maps/gis-with-javascript-tutorial/blob/master/chapter_2_print_map/data/lines.json)
 
@@ -288,7 +288,7 @@ svg.selectAll('path.lines')
 
 We are using two previously unseen attributes ```stroke``` and ```stroke-dasharray```. In svg a path can be filled (the ```fill``` attribute), as we did with the countries, for drawing lines the color attribute is ```stroke```. ```stroke-dasharray``` does what it says, in this case dashes 3 pixels long and spaced with 2 pixels. 
 
-###Draw points
+### Draw points
 
 I created a collection with points of continent names called ```continents.json```. Get it [here](https://github.com/idris-maps/gis-with-javascript-tutorial/blob/master/chapter_2_print_map/data/continents.json), add it to the ```data``` folder and require it in ```main.js```
 
@@ -333,7 +333,7 @@ We changed ```circle``` for ```text```, replaced ```cx``` and ```cy``` by ```x``
 
 Finally we pass the name of the features to ```.text()``` 
 
-##Print
+## Print
 
 We now know how to add all types of geometries (polygons, lines and points) to ```<svg>``` in the browser. It is time to create an ```.svg``` file so that we can print our map.
 

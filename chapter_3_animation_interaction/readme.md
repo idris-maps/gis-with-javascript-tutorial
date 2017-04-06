@@ -1,10 +1,10 @@
-#Animation and interaction
+# Animation and interaction
 
 Finally we get to the primary use of javascript in GIS: rendering maps in the browser.
 
 If you just want to show a static map, rendering the map in the browser does not make much sense. A static image will render faster and on a wider range of devices (read about how to create one in [chapter 2](https://github.com/idris-maps/gis-with-javascript-tutorial/tree/master/chapter_2_print_map)). But it is the perfect tool if you want to show a lot of data or keep your users for a little longer with animation and interaction.
 
-##Animation basics
+## Animation basics
 
 Create a folder for this chapter ```chapter_3_animation_interaction```
 
@@ -125,7 +125,7 @@ point.transition()
 
 See it in the browser
 
-##User interaction
+## User interaction
 
 Append a button to the ```<body>``` of the document
 
@@ -181,7 +181,7 @@ body.on('keydown', function() {
 
 Refresh the page, open the console and try it out
 
-##Animating a map
+## Animating a map
 
 We will make a map that moves between the 10 biggest populated places of the world. 
 
@@ -262,7 +262,7 @@ The only new things, if you have read the previous chapter, is that I put all co
 
 Open ```animated_map/index.html``` in the browser, you should see a map of the world zoomed in because of the ```.scale(500)``` part and centered on 0 longitude and 0 latitude (the default position). 
 
-###Screen coordinates and data coordinates
+### Screen coordinates and data coordinates
 
 We want our map to focus on our 10 cities, one after the other, and will do that by moving around the ```land``` group with ```transition()```
 
@@ -318,7 +318,7 @@ land.transition()
 
 Refresh the browser and watch the center move to Tokyo. 
 
-###setInterval()
+### setInterval()
 
 Now we want to move like this from one city to the other going through our list of cities. 
 
@@ -448,7 +448,7 @@ setInterval(function() {
 
 Try it in the browser.
 
-###Points and labels
+### Points and labels
 
 It would be good to know which city we are looking at. Lets add a point and a name. We know the city will always be in the center of the map at the end of each transition, that is where we will put them
 
@@ -502,11 +502,11 @@ We have an animated map that moves between the 10 most populated places on the p
 
 All the code is [here](https://github.com/idris-maps/gis-with-javascript-tutorial/tree/master/chapter_3_animation_interaction)
 
-###Have fun
+### Have fun
 
 Now it is your turn to create interactive maps. Remember that anything can be animated: zooming and moving around the map, changing feature colors, moving points...
- 
-###Examples
+
+### Examples
 
 * Animated map: [Day and night](http://bl.ocks.org/idris-maps/raw/c6429ce5e1e7e1b29322/) --- [code](https://github.com/idris-maps/day-night-map)
 * Interactive map: [basic data about european NUTS2 regions](http://bl.ocks.org/idris-maps/raw/06a26e4a5a6f4e9ef633/)  --- [code](https://github.com/idris-maps/nuts-map)

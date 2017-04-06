@@ -1,8 +1,8 @@
-#Geolocation and fleet tracking
+# Geolocation and fleet tracking
 
 In the last chapter of our series about GIS with javascript we will talk about **geolocation**, how to get the position of the user, and **fleet tracking**, how to have a real-time view of all the users positions.
 
-##Setup
+## Setup
 
 Like in the previous chapter we will use [express](http://expressjs.com/) for the server and [leaflet](http://leafletjs.com/) for the map.
 
@@ -76,7 +76,7 @@ That is compiled into ```public/js/script.js``` with watchify in a new terminal 
 $ watchify main.js -o public/js/script.js
 ```
 
-##Geolocation
+## Geolocation
 
 The [W3C](https://en.wikipedia.org/wiki/World_Wide_Web_Consortium), has agreed on a standard way of getting the current position of a browser. If you are interested in the details, check out the specifications [here](http://dev.w3.org/geo/api/spec-source.html). What it means is that we can get the GPS position in the same way from [most browsers](http://caniuse.com/#search=geolocation).
 
@@ -138,11 +138,11 @@ getPosition(function(lat,lng) {
 })
 ```
 
-##Fleet tracking
+## Fleet tracking
 
 Suppose we have a fleet of vehicules that we need to track. As we are in the ocean, we will say they are boats. We want to see them moving around on a map in real time.
 
-###Real time
+### Real time
 
 There is a good real time engine for node that works well with express: [socket.io](http://socket.io/). You can use it to write a chat program or collaborative tools. We will use it to get a user's position and broadcast it back to all the other users.
 
@@ -250,7 +250,7 @@ Restart the server, open a few windows in the browser and check the console of o
 
 So now we want to see them on our map. 
 
-###Showing the positions on a map
+### Showing the positions on a map
 
 Create a folder called ```lib``` in ```chapter_6_geolocation``` with a file called ```clientEvents.js``` where we will tell the client what to do to the map when an event happens.
 
@@ -462,7 +462,7 @@ socket.on('user first connection', function(positions) {
 })
 ```
 
-###The server events
+### The server events
 
 In ```server.js``` we also need to keep track of a list of users so that we can send all the connected users positions to a client that connects for the first time.
 
@@ -599,7 +599,7 @@ We have a very basic but functionning fleet tracker.
 
 The code is [here](https://github.com/idris-maps/gis-with-javascript-tutorial/tree/master/chapter_6_geolocation)
 
-###Fine tuning
+### Fine tuning
 
 If we want to try it out with real data, change ```getPositionFake()``` to ```getPosition()``` to emit the position and connect to your server with moving mobile phones.
 
